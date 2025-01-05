@@ -38,12 +38,12 @@
     <link name="${prefix}${name}">
       <visual name="${prefix}${name}_visual">
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/robot_ee/${ee_id}/visual/${name}.dae" />
+          <mesh filename="file://$(find franka_description)/meshes/robot_ee/${ee_id}/visual/${name}.dae" />
         </geometry>
       </visual>
       <collision name="${prefix}${name}_collision">
         <geometry>
-          <mesh filename="package://franka_description/meshes/robot_ee/${ee_id}/collision/${name}.stl" />
+          <mesh filename="file://$(find franka_description)/meshes/robot_ee/${ee_id}/collision/${name}.stl" />
         </geometry>
       </collision>
       <xacro:ee-inertials name="${name}" />
